@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText7",
+	"name": "tar_1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
