@@ -1,0 +1,59 @@
+{
+	"name": "src_incidence",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FileServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "src_incidence.csv"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "reg",
+				"type": "String"
+			},
+			{
+				"name": "jour",
+				"type": "String"
+			},
+			{
+				"name": "P_f",
+				"type": "String"
+			},
+			{
+				"name": "P_h",
+				"type": "String"
+			},
+			{
+				"name": "P",
+				"type": "String"
+			},
+			{
+				"name": "pop_f",
+				"type": "String"
+			},
+			{
+				"name": "pop_h",
+				"type": "String"
+			},
+			{
+				"name": "cl_age90",
+				"type": "String"
+			},
+			{
+				"name": "pop",
+				"type": "String"
+			}
+		]
+	}
+}
