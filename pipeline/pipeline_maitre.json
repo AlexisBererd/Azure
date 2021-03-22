@@ -1,0 +1,41 @@
+{
+	"name": "pipeline_maitre",
+	"properties": {
+		"activities": [
+			{
+				"name": "donnees_secondaires",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "donnees_primaires",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "donnees_secondaires",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "donnees_primaires",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "donnees_primaires",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
